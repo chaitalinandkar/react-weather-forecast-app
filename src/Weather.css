@@ -1,0 +1,250 @@
+/* Top-Section */  /* Top-Section */  /* Top-Section */  /* Top-Section */
+
+
+div.heading {
+  margin-top: 100px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.search-bar {
+  opacity: 0.7;
+  width: 500px;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  margin: 20px 20px 0 0;
+  border-radius: 10px;
+  text-align: left;
+  border: none;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.search-button {
+  padding: 10px 22px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgb(70, 72, 76);
+  color: white;
+  border: none;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-in-out;
+  margin-right: 20px;
+}
+
+.search-button:hover {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.current-location {
+  padding: 10px 17px;
+  font-size: 20px;
+  background-color: rgb(70, 72, 76);
+  border-radius: 30px;
+  color: white;
+  border: none;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-in-out;
+}
+
+.current-location:hover {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Middle-Section */ /* Middle-Section */ /* Middle-Section */ /* Middle-Section */
+
+
+
+
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  vertical-align: middle;
+  padding-bottom: 50px;
+}
+
+#weather-container-left {
+  margin-left: 30px;
+  flex: 1.2;
+}
+
+.city {
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.481);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  background: radial-gradient(circle at 10% 20%,
+      rgb(248, 219, 219) 0%,
+      rgb(229, 248, 250) 90%);
+  transition: all 0.15s ease-in-out;
+  color: #606060;
+}
+
+.city:hover {
+  color: #000000;
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.883);
+}
+
+div.day-time,
+div.date {
+  font-size: 25px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+#weather-container-middle {
+  margin-left: 70px;
+  flex: 1;
+}
+
+.weather-icon {
+  font-size: 70px;
+  opacity: 0.8;
+}
+
+.weather-description {
+  font-weight: 700;
+  opacity: 0.8;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  vertical-align: top;
+  justify-content: center;
+}
+
+.temp-number {
+  font-size: 55px;
+  font-weight: 500;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.temp-unit {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+.active {
+  color: #dad8d8;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+#weather-container-right {
+  text-align: left;
+  flex: 1;
+  float: right;
+  font-weight: 500;
+  line-height: 40px;
+  opacity: 0.7;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+
+
+/* Bottom-Section */ /* Bottom-Section */ /* Bottom-Section */ /* Bottom-Section */
+
+
+
+
+.bottom-section {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 20px 30px 20px;
+  color: black;
+}
+
+.col {
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  background: linear-gradient(to top, #d1bec9 0%, #e7e9ec 100%);
+  border: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease-in-out;
+  width: 100%;
+  height: 200px;
+  margin: 15px;
+}
+
+.col:hover {
+  background: linear-gradient(to top, #b0b0b0 0%, #eed5d5 100%);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.day {
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.details {
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.temperature-5Days {
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.open-source-code {
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.netlify-link {
+  text-decoration: none;
+}
+
+
+
+
+/* Footer-Section */ /* Footer-Section */ /* Footer-Section */ /* Footer-Section */
+
+
+
+.footer {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(240, 248, 255, 0.559);
+  width: 1000px;
+  height: 50px;
+  padding-top: 10px;
+  border-radius: 10px;
+
+}
