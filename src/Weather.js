@@ -1,11 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 import "./Weather.css"
 
-export default function Weather() {
+export default function Weather(props) {
+  let [city, setCity] = useState(null);
+  let [weather, setWeather] = useState();
+  let [ready, setReady] = useState(false)
+
+  function showWeather(response) {
+    console.log(response.data);
+    setWeather({
+      temperature: Math.round(response.data.main.temp),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      humidity: Math.round(response.data.main.humidity),
+      wind: Math.round(response.data.wind.speed),
+      city: response.data.name,
+    });
+    setReady(true);
+  }
+  function showCityWeather(event) {
+    event.preventDefault();
+    let apiKey = `f7dffd4359849bb28c77fa4fe304c30f`
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showWeather)
+  }
+  function updateCity(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+  }
   
-  return (
+  if (ready) {
+    return (
     <div className="Weather">
-      <form >
+      <form onSubmit={showCityWeather}>
           <div className="heading">
             <input
               type="text"
@@ -13,7 +41,7 @@ export default function Weather() {
               className="search-bar"
               id="search-city"
               autoComplete="off"
-              
+              onChange={updateCity}
             />
             <button
               className="search-button"
@@ -30,7 +58,7 @@ export default function Weather() {
         <div className="middle-section">
           <div className="container" id="weather-container-left">
             <div className="city" id="current-city">
-              Santa Clara
+              {weather.city}
             </div>
             <div className="date" id="display-date">
               <strong>
@@ -110,4 +138,35 @@ export default function Weather() {
         </div>
     </div>
   )
+  } else {
+    return (
+      
+      <div>
+        <form onSubmit={showCityWeather}>
+          <div className="heading">
+            <input
+              type="text"
+              placeholder="Enter a city..."
+              className="search-bar"
+              id="search-city"
+              autoComplete="off"
+              onChange={updateCity}
+            />
+            <button
+              className="search-button"
+              id="search"
+              type="submit"
+            >
+              Search
+            </button>
+            <button className="current-location" >
+              <i className="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
+        </form>
+        <h2>Loading........</h2>
+      </div>
+    )
+  }
+  
 }
