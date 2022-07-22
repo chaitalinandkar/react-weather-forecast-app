@@ -89,14 +89,14 @@ div.heading {
   border-radius: 10px;
   margin-bottom: 25px;
   background: radial-gradient(circle at 10% 20%,
-      rgb(248, 219, 219) 0%,
-      rgb(229, 248, 250) 90%);
+      rgb(117, 196, 112) 0%,
+      rgb(80, 168, 209) 90%);
   transition: all 0.15s ease-in-out;
-  color: #606060;
+  color: #000000;
 }
 
 .city:hover {
-  color: #000000;
+  color: #606060;;
   box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.883);
 }
 
@@ -124,23 +124,11 @@ div.date {
   text-transform: capitalize;
 }
 
-.temperature {
+.TemperatureConversion {
   display: flex;
   flex-direction: row;
   vertical-align: top;
   justify-content: center;
-}
-
-.temp-number {
-  font-size: 55px;
-  font-weight: 500;
-  margin-right: 10px;
-  opacity: 0.8;
-}
-
-.temp-unit {
-  font-size: 25px;
-  font-weight: 500;
 }
 
 #celsius-link,
@@ -148,15 +136,7 @@ div.date {
   text-decoration: none;
 }
 
-.active {
-  color: #dad8d8;
-}
 
-.active:hover {
-  text-decoration: none;
-  color: inherit;
-  cursor: default;
-}
 
 #weather-container-right {
   text-align: left;
@@ -166,7 +146,7 @@ div.date {
   line-height: 40px;
   opacity: 0.7;
   font-size: 20px;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 
@@ -247,4 +227,11 @@ div.date {
   padding-top: 10px;
   border-radius: 10px;
 
+}
+
+
+.spinner-loader{
+  background:yellow;
+  margin: 0 auto;
+  color: black !important;
 }
