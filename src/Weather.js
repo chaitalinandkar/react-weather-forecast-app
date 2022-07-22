@@ -77,12 +77,15 @@ export default function Weather(props) {
       navigator.geolocation.getCurrentPosition(showCurrentPosition);
     
     return (
-      <Oval className="spinner-loader"
-        height="100"
-        width="100"
-        color='white'
-        ariaLabel='loading'
-      />
+      <div className="spinner-loader ">
+        <Oval 
+          height="150"
+          width="200"
+          color='red'
+          ariaLabel='loading'
+        />
+      </div>
+      
     )
   }
   

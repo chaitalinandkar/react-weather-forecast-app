@@ -231,7 +231,7 @@ div.date {
 
 
 .spinner-loader{
-  background:yellow;
-  margin: 0 auto;
-  color: black !important;
+  position: relative;
+  left: 260px;
+  padding: 150px;
 }
