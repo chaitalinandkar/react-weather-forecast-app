@@ -3,6 +3,7 @@ import { Oval } from  'react-loader-spinner'
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -12,7 +13,8 @@ export default function Weather(props) {
   function showWeather(response) {
     console.log(response.data);
     setweatherData({
-      ready : true,
+      ready: true,
+      coordinates : response.data.coord,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -69,7 +71,21 @@ export default function Weather(props) {
             </button>
           </div>
         </form>
-        <WeatherInfo data={weatherData}/>
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
+        <div className="footer">
+        <p>
+          <a
+            href="https://github.com/chaitalinandkar/react-weather-forecast-app"
+            className="open-source-code"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code
+          </a>{" "}
+          by Chaitali Nandkar
+        </p>
+      </div>
       </div>
       
   );

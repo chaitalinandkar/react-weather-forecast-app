@@ -28,20 +28,7 @@ export default function WeatherInfo(props) {
             <div className="wind">Wind: {props.data.wind}mph</div>
           </div>
         </div>
-        <div className="bottom-section" id="forecast"></div>
-        <div className="footer">
-          <p>
-            <a
-              href="https://github.com/chaitalinandkar/react-weather-forecast-app"
-              className="open-source-code"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open-source code
-            </a>{" "}
-            by Chaitali Nandkar
-          </p>
-        </div>
+      
     </div>
   );
 }
