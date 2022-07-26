@@ -48,13 +48,56 @@ div.heading {
   border: none;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
   transition: all 0.15s ease-in-out;
+  
+  position: relative;
+  display: inline-block;
 }
-
+.current-location .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  background-color: rgb(190, 190, 190);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 130%;
+  left: 50%;
+  margin-left: -30px;
+}
 .current-location:hover {
   background-color: rgb(150, 150, 150);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
+.current-location:hover .tooltiptext{
+  visibility: visible;
+  font-size: 10px;
+}
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
 
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+ */
 
 
 

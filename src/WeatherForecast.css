@@ -54,4 +54,9 @@
 .temperature-5Days {
   font-weight: 500;
   opacity: 0.6;
+  display: inline;
+}
+.temperature-5Days:hover{
+  font-weight: bold;
+  color: black;
 }

@@ -67,7 +67,9 @@ export default function Weather(props) {
             </button>
             <button className="current-location" onClick={currentCity} >
               <i className="fa-solid fa-location-dot"></i>
+              <span className="tooltiptext">Current Location</span>
             </button>
+            
           </div>
         </form>
         <WeatherInfo data={weatherData} />
