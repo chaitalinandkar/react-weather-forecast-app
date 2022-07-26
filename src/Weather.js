@@ -11,7 +11,6 @@ export default function Weather(props) {
   let [weatherData, setweatherData] = useState({ready : false});
 
   function showWeather(response) {
-    console.log(response.data);
     setweatherData({
       ready: true,
       coordinates : response.data.coord,
